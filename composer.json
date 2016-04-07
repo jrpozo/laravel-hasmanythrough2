@@ -1,13 +1,13 @@
 {
-    "name": "gat/laravel-patches",
-    "description": "Patches for the Laravel Framework.",
+    "name": "jrpozo/laravel-hasmanythrough2",
+    "description": "Rails-like hasManyThrough relation for Laravel 5.2",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
-    "homepage": "http://www.g-a-t.es",
+    "homepage": "http://html.conclase.net",
     "authors": [
         {
             "name": "Juan R. Pozo",
-            "email": "jrpozo@g-a-t.es"
+            "email": "jrpozo@conclase.net"
         }
     ],
     "require": {
