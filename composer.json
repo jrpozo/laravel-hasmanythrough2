@@ -1,0 +1,22 @@
+{
+    "name": "gat/laravel-patches",
+    "description": "Patches for the Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "homepage": "http://www.g-a-t.es",
+    "authors": [
+        {
+            "name": "Juan R. Pozo",
+            "email": "jrpozo@g-a-t.es"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Illuminate\\": "src/Illuminate/"
+        }
+    },
+    "minimum-stability": "dev"
+}
