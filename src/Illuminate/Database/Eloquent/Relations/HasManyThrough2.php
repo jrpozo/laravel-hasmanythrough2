@@ -109,7 +109,7 @@ class HasManyThrough2 extends Relation
     {
         $query = $query ?: $this->query;
 
-        $localKey = $this->parent->getTable().'.'.$this->secondKey;
+        $localKey = $this->parent->getTable().'.'.$this->localKey;
 
         $query->join($this->parent->getTable(), $localKey, '=', $this->related->getQualifiedKeyName());
 
