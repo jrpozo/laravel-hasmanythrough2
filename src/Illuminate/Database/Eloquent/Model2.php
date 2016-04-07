@@ -3,6 +3,7 @@
 namespace Illuminate\Database\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough2;
 
 class Model2 extends Model
 {
@@ -26,6 +27,6 @@ class Model2 extends Model
 
         $localKey = $localKey ?: $this->getKeyName();
 
-        return new HasManyThrough((new $related)->newQuery(), $this, $through, $firstKey, $secondKey, $localKey);
+        return new HasManyThrough2((new $related)->newQuery(), $this, $through, $firstKey, $secondKey, $localKey);
     }
 }
