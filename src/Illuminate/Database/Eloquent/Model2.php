@@ -19,14 +19,14 @@ class Model2 extends Model
      */
     public function hasManyThrough2($related, $through, $firstKey = null, $secondKey = null, $localKey = null)
     {
-        $through = new $through;
+        $related = new $related;
 
         $firstKey = $firstKey ?: $this->getForeignKey();
 
-        $secondKey = $secondKey ?: $through->getForeignKey();
+        $secondKey = $secondKey ?: $related->getForeignKey();
 
         $localKey = $localKey ?: $this->getKeyName();
 
-        return new HasManyThrough2((new $related)->newQuery(), $this, $through, $firstKey, $secondKey, $localKey);
+        return new HasManyThrough2($related->newQuery(), $this, new $through, $firstKey, $secondKey, $localKey);
     }
 }

@@ -109,9 +109,9 @@ class HasManyThrough2 extends Relation
     {
         $query = $query ?: $this->query;
 
-        $localKey = $this->parent->getTable().'.'.$this->localKey;
+        $secondKey = $this->parent->getTable().'.'.$this->secondKey;
 
-        $query->join($this->parent->getTable(), $localKey, '=', $this->related->getQualifiedKeyName());
+        $query->join($this->parent->getTable(), $secondKey, '=', $this->related->getQualifiedKeyName());
 
         if ($this->parentSoftDeletes()) {
             $query->whereNull($this->parent->getQualifiedDeletedAtColumn());
